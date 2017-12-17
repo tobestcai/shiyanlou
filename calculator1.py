@@ -25,5 +25,37 @@ class Args(object):
 args = Args()
 
 class Config(object)
-    def __init__(self)
-        self
+    def __init__(self,configfile)
+        self.configfile = configfile
+        self._config = {}
+    def getcon(self):
+        with open(self.configfile) as f:
+            try:
+                for line in f.readlines():
+                self.config[line[0]]=float(line[1])
+            except:
+                print('Parameter Error')
+                exit()
+    def get_config(self,surance)
+        return self._config[surance]
+config = Config()
+
+class UserData(object)
+    def __init__(self,userdatafile):
+        self.userdatafile = userdatafile
+        self.userdata = {}
+    def getinf(self):
+        with open(self.userdatafile) as g:
+            try:
+                for line in g.readlines():
+                self.userdata[line[0]] = float(line[1])
+            except:
+                print('Parameter Error')
+                exit()
+    def get_income(self,id)
+        return self.userdata[id]
+userdata = UserData()
+
+
+
+
