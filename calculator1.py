@@ -52,10 +52,14 @@ class UserData(object)
             except:
                 print('Parameter Error')
                 exit()
-    def get_income(self,id)
-        return self.userdata[id]
+        return self.userdata
+    def get_income(self):
+        return self.getinf()
+    def cal_insurance_number(self):
+        original_
+        
 userdata = UserData()
 
-
+        
 
 
